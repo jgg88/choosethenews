@@ -11,16 +11,9 @@ var Article = require("./models/Article.js");
 var request = require("request");
 var cheerio = require("cheerio");
 
-// mongoose.Promise = Promise;
-
-// var port = process.env.PORT || 3000
-
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI, {
-  useMongoClient: true
-});
+
+var port = process.env.PORT || 3000
 
 var app = express();
 
