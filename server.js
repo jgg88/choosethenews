@@ -12,7 +12,6 @@ var request = require("request");
 var cheerio = require("cheerio");
 
 mongoose.Promise = Promise;
-
 var port = process.env.PORT || 3000
 
 var app = express();
@@ -33,7 +32,6 @@ app.engine("handlebars", exphbs({
 app.set("view engine", "handlebars");
 
 mongoose.connect("mongodb://heroku_vtg0t00d:s9s639geqktepsvn0sr8ojh5jl@ds133321.mlab.com:33321/heroku_vtg0t00d");
-//mongoose.connect("mongodb://localhost/mongoscraper");
 
 var db = mongoose.connection;
 
